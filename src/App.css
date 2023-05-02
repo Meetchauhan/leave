@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+.container {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inner {
+  padding: 20px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  width: 80%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  margin: 0;
+  color: red;
+}
+.data-input {
+  margin-bottom: 20px;
+}
+.days input {
+  width: 100%;
+  margin: 10px 0 5px;
+  height: 30px;
+}
+.startDate input {
+  width: 100%;
+  margin: 10px 0 5px;
+  height: 30px;
+}
+.holidays input {
+  width: 90%;
+  margin: 10px 0 5px;
+  height: 30px;
+}
+.deleteHoliday{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+label {
+  font-size: 20px;
+  font-weight: 600;
+}
+.checkbox {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+button {
+  background: white;
+}
+button.add {
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+button.save {
+  padding: 5px 35px;
+  border-radius: 5px;
+}
+.week {
+  padding-left: 20px;
+}
+.weekEnd {
+  margin-bottom: 20px;
+}
+input {
+  border-radius: 5px;
+}
+.result-item {
+  background-color: rgb(245 245 245 / 78%);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.weekEndsWorking {
+  margin: 0 0 20px;
+}
+.label {
+  color: gray;
+  font-size: 15px;
+  font-weight: 600;
+}
+.item {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+.resultInner {
+  border-top: 1px solid rgb(193, 191, 191);
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:575px){
+  form{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .deleteHoliday img{
+    padding-left: 20px;
   }
 }
