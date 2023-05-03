@@ -14,7 +14,6 @@ export default function LeaveForm() {
       days: "",
       startDate: "",
       holidays: numOfDatePicker,
-      confirm_password: "",
       saturday: false,
       sunday: false,
     },
