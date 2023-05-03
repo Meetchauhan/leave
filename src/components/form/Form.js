@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
-import { LeaveScheme } from "./schemas";
+import { LeaveScheme } from "../../schemas";
 import { useState } from "react";
 import moment from "moment";
-import deleteIcon from "./images/remove.svg";
+import deleteIcon from "../../images/remove.svg";
 
 export default function LeaveForm() {
   const [numOfDatePicker, setNumOfDatePicker] = useState([""]);
