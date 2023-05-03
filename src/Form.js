@@ -27,17 +27,15 @@ export default function LeaveForm() {
   });
 
   function handleClickHolidays() {
-    setNumOfDatePicker([...numOfDatePicker, ""]);
+    if (numOfDatePicker.length <= 10) {
+      setNumOfDatePicker([...numOfDatePicker, ""]);
+    }
   }
 
   function handleDeleteHolidays(ID) {
-    setNumOfDatePicker(
-      [numOfDatePicker].filter((id, index) => {
-        console.log("index", index);
-        console.log("ID", id);
-        return id !== index;
-      })
-    );
+    const tempList = [...numOfDatePicker];
+    tempList.splice(ID, 1);
+    setNumOfDatePicker(tempList);
   }
 
   const DATE_FORMATE = "YYYY/MM/DD";
@@ -134,17 +132,18 @@ export default function LeaveForm() {
                       setNumOfDatePicker(tempList);
                     }}
                   />
-                  <img
-                    src={deleteIcon}
-                    alt="delete-icon"
-                    onClick={handleDeleteHolidays}
-                  />
+                  {numOfDatePicker.length > 1 && (
+                    <img
+                      src={deleteIcon}
+                      alt="delete-icon"
+                      onClick={() => handleDeleteHolidays(index)}
+                    />
+                  )}
                 </div>
               ))}
               {errors.holidays ? (
                 <p className="form-error">{errors.holidays}</p>
               ) : null}
-              <br />
               <button
                 type="button"
                 className="add"
